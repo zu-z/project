@@ -149,7 +149,8 @@
 		  line-height: 0.8em;
 		}
 		
-		
+
+
         /*第一筆的底色*/
         span:target ~ #tab > ul li:first-child a {
             background: #C71585;
@@ -163,6 +164,7 @@
 
         /*頁籤變換&第一筆*/
         span ~ #tab > ul li:first-child a,
+        #tab-1:target ~ #tab > ul li a[href$="#tab-1"],
         #tab-2:target ~ #tab > ul li a[href$="#tab-2"] {
             background: #fff;
             border-radius: 5px 5px 0 0;
@@ -170,6 +172,7 @@
         }
 
         span ~ #tab > ul li:first-child a::before,
+        #tab-1:target ~ #tab > ul li a[href$="#tab-1"]::before,
         #tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before{
             background-color: white;
             height: 100%;
@@ -177,6 +180,7 @@
 
         /*頁籤內容顯示&第一筆*/
         span ~ #tab > div:first-of-type,
+        #tab-1:target ~ #tab > div.tab-content-1,
         #tab-2:target ~ #tab > div.tab-content-2{
             visibility: visible;
             height: 500px;
@@ -209,16 +213,41 @@
 <body>
         <div class="auto-style1"><a><b>預測COVID-19感染人數變化</b></a></div><br />
             <!-- HTML -->
+            <span id="tab-1">最新公告</span>
             <span id="tab-2">預測感染人數變化</span>
 
             <!-- 頁籤按鈕 -->
             <div id="tab">
                 <ul>
+                    <li><a href="#tab-1">最新公告</a></li>
                     <li><a href="#tab-2">預測感染人數變化</a></li>
                 </ul>
 
             <!-- 頁籤的內容區塊 -->
-                
+                <div class="tab-content-1" style="overflow-x:auto;overflow-y:auto;background:white;">
+					<nav>
+					<br>
+						<a href="#policy" style="text-decoration:none;">  | 居家隔離政策 |</a>
+						<a href="#entry" style="text-decoration:none;">  | 入境檢疫政策 |</a>
+						<a href="#reporter" style="text-decoration:none;">  | 記者會直播 |</a>
+					    <a href="#page" style="text-decoration:none;">  | 防疫紀錄片 |</a>
+					</nav>
+					
+						<hr></hr>
+						
+					<p id="policy"><h3>居家隔離政策</h3></p>
+					<a href="https://www.cdc.gov.tw/File/Get/XGdlazlDT998bKWRG9JQyg" target="_blank" title="20221107起接觸者採0+7自主防疫.pdf(另開新視窗)" style="text-decoration:none;">20221107起接觸者採0+7自主防疫.pdf</a>
+					
+					<p id="entry"><h3>入境檢疫政策</h3></p>
+					<a href="https://www.cdc.gov.tw/ArrivalQuarantine/info.html" target="_blank" title="旅客來臺COVID-19入境檢疫及醫療資訊網" style="text-decoration:none;">旅客來臺COVID-19入境檢疫及醫療資訊網</a>
+                    
+					<p id="reporter"><h3>記者會直播</h3></p>
+					<iframe width="768" height="432" src="https://www.youtube.com/embed/9BjEq8dAHNM" title="【即時字幕】2022/11/14 14:00 中央流行疫情指揮中心嚴重特殊傳染性肺炎記者會" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+					<p id="page"><h3>臺灣 COVID-19防疫一週年紀錄片</h3></p>
+					<iframe width="424" height="238" src="https://www.youtube.com/embed/FHSKtyfqGJU" title="《我們》─守護臺灣 COVID-19防疫一週年紀錄片" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>				
+					
+				</div>
                 
                 <div class="tab-content-2">
 				<br>
@@ -358,7 +387,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -536,7 +565,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/1-1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -714,7 +743,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/1-2.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -892,7 +921,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/2.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -1070,7 +1099,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -1248,7 +1277,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/3-1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -1426,7 +1455,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/3-2.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -1604,7 +1633,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/4.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -1782,7 +1811,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/4-1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -1960,7 +1989,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/5.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -2138,7 +2167,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/5-1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -2316,7 +2345,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/6.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
@@ -2494,7 +2523,7 @@
 					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/6-1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0">台中縣</h2>
+									<h2 class="box-body_0">台中市</h2>
 									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
