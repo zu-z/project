@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <style type="text/css">
+        /* CSS */
+		
+        .auto-style1 {
+            text-align: center;
+            font-size:28px;
+			color:white;
+        }
+		body {
+			background-image: url('https://xinzhuobu.com/wp-content/uploads/2022/11/20221105002.jpg');
+			background-size:100%,100%;
+			opacity:0.8;
+		}
+        #tab {
+            width: 800px;
+            background: #C71585;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid 1px #C71585;
+        }
+
+        /* 頁籤ul */
+        #tab > ul {
+            /* overflow: hidden; */
+            margin: 0;
+            padding: 10px 20px 0 20px;
+        }
+
+        #tab > ul > li {
+            list-style-type: none;
+        }
+
+        /* 頁籤上的文字 */
+        #tab > ul > li > a {
+            text-decoration: none;
+            font-size: 15px;
+            color: black;
+            float: left;
+            padding: 10px;
+            margin-left: 5px;
+            font-size:20px;
+        }
+
+        /*頁籤div內容*/
+        #tab > div {
+            clear: both;
+            padding: 0 15px;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+		
+        /*第一筆的底色*/
+        span:target ~ #tab > ul li:first-child a {
+            background: #C71585;
+        }
+
+        span:target ~ #tab > div:first-of-type {
+            visibility: hidden;
+            height: 0;
+            padding: 0 15px;
+        }
+
+        /*頁籤變換&第一筆*/
+        span ~ #tab > ul li:first-child a,
+        #tab-2:target ~ #tab > ul li a[href$="#tab-2"] {
+            background: #fff;
+            border-radius: 5px 5px 0 0;
+            font-size:20px;
+        }
+
+        span ~ #tab > ul li:first-child a::before,
+        #tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before{
+            background-color: white;
+            height: 100%;
+        }
+
+        /*頁籤內容顯示&第一筆*/
+        span ~ #tab > div:first-of-type,
+        #tab-2:target ~ #tab > div.tab-content-2{
+            visibility: visible;
+            height: 500px;
+            background: #fff;
+        }
+
+        span {
+            display: none;
+        }
+		
+		nav{
+            font-family:"標楷體";
+			font-size:22px;
+			text-align:center;
+		}
+		#page{
+		    font-family:"標楷體";
+			color:black;
+		}
+		#reporter{
+		    font-family:"標楷體";
+			color:black;
+		}
+		 #policy{
+		    font-family:"標楷體";
+			color:black;
+		}
+    </style>
+</head>
+<body>
+        <div class="auto-style1"><a><b>預測COVID-19感染人數變化</b></a></div><br />
+            <!-- HTML -->
+            <span id="tab-2">預測感染人數變化</span>
+
+            <!-- 頁籤按鈕 -->
+            <div id="tab">
+                <ul>
+                    <li><a href="#tab-2">預測感染人數變化</a></li>
+                </ul>
+
+            <!-- 頁籤的內容區塊 -->
+                
+                
+                <div class="tab-content-2">
+				<br>
+				
+				</div>
+			</div>				
+		</div>
+</body>
+
+</html>
