@@ -139,7 +139,8 @@
         /*頁籤變換&第一筆*/
         span ~ #tab > ul li:first-child a,
         #tab-1:target ~ #tab > ul li a[href$="#tab-1"],
-        #tab-2:target ~ #tab > ul li a[href$="#tab-2"] {
+		#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"] {
             background: #fff;
             border-radius: 5px 5px 0 0;
             font-size:20px;
@@ -147,7 +148,8 @@
 
         span ~ #tab > ul li:first-child a::before,
         #tab-1:target ~ #tab > ul li a[href$="#tab-1"]::before,
-        #tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before{
+		#tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before,
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"]::before{
             background-color: white;
             height: 100%;
         }
@@ -155,7 +157,8 @@
         /*頁籤內容顯示&第一筆*/
         span ~ #tab > div:first-of-type,
         #tab-1:target ~ #tab > div.tab-content-1,
-        #tab-2:target ~ #tab > div.tab-content-2{
+		#tab-2:target ~ #tab > div.tab-content-2,
+        #tab-3:target ~ #tab > div.tab-content-3{
             visibility: visible;
             height: 500px;
             background: #fff;
@@ -188,13 +191,15 @@
         <div class="auto-style1"><a><b>預測COVID-19感染人數變化</b></a></div><br />
             <!-- HTML -->
             <span id="tab-1">最新公告</span>
-            <span id="tab-2">預測感染人數變化</span>
+			<span id="tab-2">預測感染人數變化</span>
+            <span id="tab-3">查詢全國感染人數</span>
 
             <!-- 頁籤按鈕 -->
             <div id="tab">
                 <ul>
                     <li><a href="#tab-1">最新公告</a></li>
-                    <li><a href="#tab-2">預測感染人數變化</a></li>
+					<li><a href="#tab-2">預測感染人數變化</a></li>
+                    <li><a href="#tab-3">查詢全國感染人數</a></li>
                 </ul>
 
             <!-- 頁籤的內容區塊 -->
@@ -227,8 +232,27 @@
 					        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>				
 					
 				</div>
+				
+				<div class="tab-content-2" style="overflow-x:auto;overflow-y:auto;background:white;">
+				<br><br><br><br>
+				
+					<div align="left">
+					      <form method="post" action={{url_for('second_web')}}>
+					      <label for="input_choosedate"><h2>&emsp;&emsp;請選擇天數：</h2></label>
+					      <label>&emsp;&emsp;&emsp;<input type="radio" id="input_choosedate" name="user_input" value="一天" checked>一天</label>
+					      <br><label>&emsp;&emsp;&emsp;<input type="radio" id="input_choosedate" name="user_input" value="一周">一周</label>
+					      <br><label>&emsp;&emsp;&emsp;<input type="radio" id="input_choosedate" name="user_input" value="一月">一月</label>
+					      <br><br>
+					      <label for="input_date"><h2>&emsp;&emsp;請選擇日期：</h2></label>
+					      &emsp;&emsp;&emsp;<input type="date" id="input_date" name="user_date" value="2022-06-01" min="2022-06-01" max="2022-11-01">
+					      <br><br>
+					      <!--<input type="submit">-->
+					      &emsp;&emsp;&emsp;<button type="submit" class="btn btn-primary">查詢</button>
+					      </form>
+					</div>
+				</div>
                 
-                <div class="tab-content-2">
+                <div class="tab-content-3">
 				<br><br><br><br>
 				
 					<div align="left">
