@@ -1131,7 +1131,7 @@
         .marker, .zoomHolder img {
             display: block;
         }
-        .img-responsive, .tab-content-2>img1 {
+        .img-responsive, .tab-content-3>img1 {
             display: block;
             max-width: 100%;
             height: 400px;
@@ -1221,21 +1221,21 @@
 
         /*頁籤變換&第一筆*/
         span ~ #tab > ul li:first-child a,
-        #tab-2:target ~ #tab > ul li a[href$="#tab-2"] {
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"] {
             background: #fff;
             border-radius: 5px 5px 0 0;
             font-size:20px;
         }
 
         span ~ #tab > ul li:first-child a::before,
-        #tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before{
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"]::before{
             background-color: white;
             height: 100%;
         }
 
         /*頁籤內容顯示&第一筆*/
         span ~ #tab > div:first-of-type,
-        #tab-2:target ~ #tab > div.tab-content-2{
+        #tab-3:target ~ #tab > div.tab-content-3{
             visibility: visible;
             height: 500px;
             background: #fff;
@@ -1267,18 +1267,18 @@
 <body>
         <div class="auto-style1"><a><b>預測COVID-19感染人數變化</b></a></div><br />
             <!-- HTML -->
-            <span id="tab-2">預測感染人數變化</span>
+            <span id="tab-3">預測感染人數變化</span>
 
             <!-- 頁籤按鈕 -->
             <div id="tab">
                 <ul>
-                    <li><a href="#tab-2">預測感染人數變化</a></li>
+                    <li><a href="#tab-3">預測感染人數變化</a></li>
                 </ul>
 
             <!-- 頁籤的內容區塊 -->
                 
                 
-                <div class="tab-content-2">
+                <div class="tab-content-3">
 				<br>
 				
 					<div align="left">
