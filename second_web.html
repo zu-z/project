@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -5,11 +6,14 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-	
-	
-<script type="text/javascript">
+	<script type="text/javascript">
 		onload= "run();"
-		//[99999, 5231, 7777, 0, 15000, 16555, 6555] 
+		//圖片陣列
+		var KEL=[], NTPC=[], TPE=[], TYN=[], HSZ0=[], HSZ1=[], ZMI=[], TXG=[], CHW=[], NTC=[], YUN=[];
+		var CYI0=[], CYI1=[], TNN=[], KHH=[], PIF=[], ILA=[], HUN=[], TTT=[], PEH=[], KNH=[], LNN=[];
+		var clear = null, index = 0;
+		
+		//python Jinja2傳值
 		var Keelung = {{ data_re01|tojson }}
 		var New_Taipei = {{ data_re02|tojson }}
 		var Taipei = {{ data_re03|tojson }}
@@ -32,11 +36,7 @@
 		var Penghu = {{ data_re20|tojson }}
 		var Kinmen = {{ data_re21|tojson }}
 		var Lienchiang = {{ data_re22|tojson }}
-		
-		var KEL=[], NTPC=[], TPE=[], TYN=[], HSZ0=[], HSZ1=[], ZMI=[], TXG=[], CHW=[], NTC=[], YUN=[];
-		var CYI0=[], CYI1=[], TNN=[], KHH=[], PIF=[], ILA=[], HUN=[], TTT=[], PEH=[], KNH=[], LNN=[];
-		var clear = null, index = 0;
-		
+
 		//基隆市KEL Keelung
 		for(var i=0; i<Keelung.length; i++) {
 			switch (true) {
@@ -221,43 +221,43 @@
 		for(var i=0; i<Hsinchu_County.length; i++) {
 			switch (true) {
 				case Hsinchu_County[i] >= 0 && Hsinchu_County[i] < 1501:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/1.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/1.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 1501 && Hsinchu_County[i] < 3001:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/1-1.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/1-1.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 3001 && Hsinchu_County[i] < 4501:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/1-2.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/1-2.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 4501 && Hsinchu_County[i] < 6001:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/2.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/2.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 6001 && Hsinchu_County[i] < 7501:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/3.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/3.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 7501 && Hsinchu_County[i] < 9001:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/3-1.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/3-1.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 9001 && Hsinchu_County[i] < 10501:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/3-2.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/3-2.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 10501 && Hsinchu_County[i] < 12001:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/4.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/4.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 12001 && Hsinchu_County[i] < 13501:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/4-1.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/4-1.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 13501 && Hsinchu_County[i] < 15001:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/5.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/5.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 15001 && Hsinchu_County[i] < 16501:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/5-1.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/5-1.png?raw=true"');
 					break;	
 				case Hsinchu_County[i] >= 16501 && Hsinchu_County[i] < 18001:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/6.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/6.png?raw=true"');
 					break;
 				case Hsinchu_County[i] >= 18001:
-					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/6-1.png?raw=true"');
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/6-1.png?raw=true"');
 					break;					
 			}
 		};
@@ -1028,7 +1028,7 @@
 			}
 		};
 		
-		//設定每秒執行一次
+		//設定每半秒執行一次
 		clear = setInterval(function() {run();}, 500);
 		
 		//循序播放
@@ -1653,7 +1653,6 @@
 								<p class="box-body_0">總共:{{ data_KEL }}人</p>
 							</div>
 				    </div>
-					
 			</div>
 		</div>
 </body>
