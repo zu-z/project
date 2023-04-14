@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -1291,35 +1292,56 @@
 						<br>	
 					</div>
                    <br><tab>
-				   <div align="left">
-				   <h2>&emsp;查看各縣市折線圖:</h2>
-						&emsp;&emsp;
-						<select style="font-size:20px;">
-							<option>請選擇縣市</option>
-							<option>台北市</option>
-							<option>台中市</option>
-							<option>台東縣</option>
-							<option>台南市</option>
-							<option>宜蘭縣</option>
-							<option>花蓮縣</option>
-							<option>金門縣</option>
-							<option>南投縣</option>
-							<option>屏東縣</option>
-							<option>苗栗縣</option>
-							<option>桃園市</option>
-							<option>高雄市</option>
-							<option>基隆市</option>
-							<option>連江縣</option>
-							<option>雲林縣</option>
-							<option>新北市</option>
-							<option>新竹市</option>
-							<option>新竹縣</option>
-							<option>嘉義市</option>
-							<option>嘉義縣</option>
-							<option>彰化縣</option>
-							<option>澎湖縣</option>
-						</select>
-					</div>
+					<script>
+						function myFunction(input) {
+							var e = document.getElementById("balabala");
+							var pic = document.getElementById("plot");
+							var value = e.value;
+							
+							if(e.value=="Value"){
+								pic.style.visibility="hidden";
+							}
+							else{
+								pic.src=value;
+								pic.style.visibility="visible";
+							}
+							
+							//var text = e.options[e.selectedIndex].text;
+						}
+					</script>
+					<form method="post">
+						<div align="left">
+							<h2>&emsp;查看各縣市折線圖:</h2>
+							&emsp;&emsp;
+							<select id="balabala" style="font-size:20px;" onchange="myFunction(this)">
+								<option value="Value">請選擇縣市</option>
+								<option value="./static/TPE_plot.png">台北市</option>
+								<option value="./static/TXG_plot.png">台中市</option>
+								<option value="./static/TTT_plot.png">台東縣</option>
+								<option value="./static/TNN_plot.png">台南市</option>
+								<option value="./static/ILA_plot.png">宜蘭縣</option>
+								<option value="./static/HUN_plot.png">花蓮縣</option>
+								<option value="./static/KNH_plot.png">金門縣</option>
+								<option value="./static/NTC_plot.png">南投縣</option>
+								<option value="./static/PIF_plot.png">屏東縣</option>
+								<option value="./static/ZMI_plot.png">苗栗縣</option>
+								<option value="./static/TYN_plot.png">桃園市</option>
+								<option value="./static/KHH_plot.png">高雄市</option>
+								<option value="./static/KEL_plot.png">基隆市</option>
+								<option value="./static/LNN_plot.png">連江縣</option>
+								<option value="./static/YUN_plot.png">雲林縣</option>
+								<option value="./static/NTPC_plot.png">新北市</option>
+								<option value="./static/HSZ1_plot.png">新竹市</option>
+								<option value="./static/HSZ0_plot.png">新竹縣</option>
+								<option value="./static/CYI1_plot.png">嘉義市</option>
+								<option value="./static/CYI0_plot.png">嘉義縣</option>
+								<option value="./static/CHW_plot.png">彰化縣</option>
+								<option value="./static/PEH_plot.png">澎湖縣</option>
+							</select>
+						</div>
+	
+						<img id="plot" src="" style="visibility: hidden;" height="250" width="300" />
+					</form>
 				   <!------------------------------------------------------3-------------------------------------------------------->
 				   <img src="https://github.com/zu-z/project/blob/main/%E9%A1%8F%E8%89%B2%E5%8D%80%E9%96%93.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_color'>
 					
