@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -5,6 +6,1063 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+	<script type="text/javascript">
+		onload= "run();"
+		//圖片陣列
+		var KEL=[], NTPC=[], TPE=[], TYN=[], HSZ0=[], HSZ1=[], ZMI=[], TXG=[], CHW=[], NTC=[], YUN=[];
+		var CYI0=[], CYI1=[], TNN=[], KHH=[], PIF=[], ILA=[], HUN=[], TTT=[], PEH=[], KNH=[], LNN=[];
+		var clear = null, index = 0;
+		
+		//python Jinja2傳值
+		var Keelung = {{ data_re01|tojson }}
+		var New_Taipei = {{ data_re02|tojson }}
+		var Taipei = {{ data_re03|tojson }}
+		var Taoyuan = {{ data_re04|tojson }}
+		var Hsinchu_County = {{ data_re05|tojson }}
+		var Hsinchu_City = {{ data_re06|tojson }}
+		var Miaoli = {{ data_re07|tojson }}
+		var Taichung = {{ data_re08|tojson }}
+		var Changhua = {{ data_re09|tojson }}
+		var Nantou = {{ data_re10|tojson }}
+		var Yunlin = {{ data_re11|tojson }}
+		var Chiayi_County = {{ data_re12|tojson }}
+		var Chiayi_City = {{ data_re13|tojson }}
+		var Tainan = {{ data_re14|tojson }}
+		var Kaohsiung = {{ data_re15|tojson }}
+		var Pingtung = {{ data_re16|tojson }}
+		var Yilan = {{ data_re17|tojson }}
+		var Hualien = {{ data_re18|tojson }}
+		var Taitung = {{ data_re19|tojson }}
+		var Penghu = {{ data_re20|tojson }}
+		var Kinmen = {{ data_re21|tojson }}
+		var Lienchiang = {{ data_re22|tojson }}
+
+		//基隆市KEL Keelung
+		for(var i=0; i<Keelung.length; i++) {
+			switch (true) {
+				case Keelung[i] >= 0 && Keelung[i] < 1501:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/1.png?raw=true"');
+					break;
+				case Keelung[i] >= 1501 && Keelung[i] < 3001:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/1-1.png?raw=true"');
+					break;
+				case Keelung[i] >= 3001 && Keelung[i] < 4501:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/1-2.png?raw=true"');
+					break;
+				case Keelung[i] >= 4501 && Keelung[i] < 6001:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/2.png?raw=true"');
+					break;
+				case Keelung[i] >= 6001 && Keelung[i] < 7501:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/3.png?raw=true"');
+					break;
+				case Keelung[i] >= 7501 && Keelung[i] < 9001:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/3-1.png?raw=true"');
+					break;
+				case Keelung[i] >= 9001 && Keelung[i] < 10501:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/3-2.png?raw=true"');
+					break;
+				case Keelung[i] >= 10501 && Keelung[i] < 12001:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/4.png?raw=true"');
+					break;
+				case Keelung[i] >= 12001 && Keelung[i] < 13501:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/4-1.png?raw=true"');
+					break;
+				case Keelung[i] >= 13501 && Keelung[i] < 15001:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/5.png?raw=true"');
+					break;
+				case Keelung[i] >= 15001 && Keelung[i] < 16501:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/5-1.png?raw=true"');
+					break;	
+				case Keelung[i] >= 16501 && Keelung[i] < 18001:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/6.png?raw=true"');
+					break;
+				case Keelung[i] >= 18001:
+					KEL.push('<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//新北市NTPC New_Taipei
+		for(var i=0; i<New_Taipei.length; i++) {
+			switch (true) {
+				case New_Taipei[i] >= 0 && New_Taipei[i] < 1501:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/1.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 1501 && New_Taipei[i] < 3001:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/1-1.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 3001 && New_Taipei[i] < 4501:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/1-2.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 4501 && New_Taipei[i] < 6001:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/2.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 6001 && New_Taipei[i] < 7501:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/3.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 7501 && New_Taipei[i] < 9001:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/3-1.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 9001 && New_Taipei[i] < 10501:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/3-2.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 10501 && New_Taipei[i] < 12001:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/4.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 12001 && New_Taipei[i] < 13501:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/4-1.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 13501 && New_Taipei[i] < 15001:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/5.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 15001 && New_Taipei[i] < 16501:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/5-1.png?raw=true"');
+					break;	
+				case New_Taipei[i] >= 16501 && New_Taipei[i] < 18001:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/6.png?raw=true"');
+					break;
+				case New_Taipei[i] >= 18001:
+					NTPC.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//台北市TPE Taipei
+		for(var i=0; i<Taipei.length; i++) {
+			switch (true) {
+				case Taipei[i] >= 0 && Taipei[i] < 1501:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/1.png?raw=true"');
+					break;
+				case Taipei[i] >= 1501 && Taipei[i] < 3001:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/1-1.png?raw=true"');
+					break;
+				case Taipei[i] >= 3001 && Taipei[i] < 4501:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/1-2.png?raw=true"');
+					break;
+				case Taipei[i] >= 4501 && Taipei[i] < 6001:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/2.png?raw=true"');
+					break;
+				case Taipei[i] >= 6001 && Taipei[i] < 7501:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/3.png?raw=true"');
+					break;
+				case Taipei[i] >= 7501 && Taipei[i] < 9001:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/3-1.png?raw=true"');
+					break;
+				case Taipei[i] >= 9001 && Taipei[i] < 10501:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/3-2.png?raw=true"');
+					break;
+				case Taipei[i] >= 10501 && Taipei[i] < 12001:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/4.png?raw=true"');
+					break;
+				case Taipei[i] >= 12001 && Taipei[i] < 13501:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/4-1.png?raw=true"');
+					break;
+				case Taipei[i] >= 13501 && Taipei[i] < 15001:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/5.png?raw=true"');
+					break;
+				case Taipei[i] >= 15001 && Taipei[i] < 16501:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/5-1.png?raw=true"');
+					break;	
+				case Taipei[i] >= 16501 && Taipei[i] < 18001:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/6.png?raw=true"');
+					break;
+				case Taipei[i] >= 18001:
+					TPE.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//桃園市TYN Taoyuan
+		for(var i=0; i<Taoyuan.length; i++) {
+			switch (true) {
+				case Taoyuan[i] >= 0 && Taoyuan[i] < 1501:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/1.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 1501 && Taoyuan[i] < 3001:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/1-1.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 3001 && Taoyuan[i] < 4501:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/1-2.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 4501 && Taoyuan[i] < 6001:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/2.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 6001 && Taoyuan[i] < 7501:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/3.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 7501 && Taoyuan[i] < 9001:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/3-1.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 9001 && Taoyuan[i] < 10501:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/3-2.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 10501 && Taoyuan[i] < 12001:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/4.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 12001 && Taoyuan[i] < 13501:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/4-1.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 13501 && Taoyuan[i] < 15001:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/5.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 15001 && Taoyuan[i] < 16501:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/5-1.png?raw=true"');
+					break;	
+				case Taoyuan[i] >= 16501 && Taoyuan[i] < 18001:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/6.png?raw=true"');
+					break;
+				case Taoyuan[i] >= 18001:
+					TYN.push('<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//新竹縣HSZ0 Hsinchu_County
+		for(var i=0; i<Hsinchu_County.length; i++) {
+			switch (true) {
+				case Hsinchu_County[i] >= 0 && Hsinchu_County[i] < 1501:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/1.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 1501 && Hsinchu_County[i] < 3001:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/1-1.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 3001 && Hsinchu_County[i] < 4501:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/1-2.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 4501 && Hsinchu_County[i] < 6001:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/2.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 6001 && Hsinchu_County[i] < 7501:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/3.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 7501 && Hsinchu_County[i] < 9001:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/3-1.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 9001 && Hsinchu_County[i] < 10501:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/3-2.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 10501 && Hsinchu_County[i] < 12001:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/4.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 12001 && Hsinchu_County[i] < 13501:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/4-1.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 13501 && Hsinchu_County[i] < 15001:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/5.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 15001 && Hsinchu_County[i] < 16501:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/5-1.png?raw=true"');
+					break;	
+				case Hsinchu_County[i] >= 16501 && Hsinchu_County[i] < 18001:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/6.png?raw=true"');
+					break;
+				case Hsinchu_County[i] >= 18001:
+					HSZ0.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//新竹市HSZ1 Hsinchu_City
+		for(var i=0; i<Hsinchu_City.length; i++) {
+			switch (true) {
+				case Hsinchu_City[i] >= 0 && Hsinchu_City[i] < 1501:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/1.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 1501 && Hsinchu_City[i] < 3001:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/1-1.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 3001 && Hsinchu_City[i] < 4501:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/1-2.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 4501 && Hsinchu_City[i] < 6001:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/2.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 6001 && Hsinchu_City[i] < 7501:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/3.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 7501 && Hsinchu_City[i] < 9001:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/3-1.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 9001 && Hsinchu_City[i] < 10501:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/3-2.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 10501 && Hsinchu_City[i] < 12001:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/4.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 12001 && Hsinchu_City[i] < 13501:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/4-1.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 13501 && Hsinchu_City[i] < 15001:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/5.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 15001 && Hsinchu_City[i] < 16501:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/5-1.png?raw=true"');
+					break;	
+				case Hsinchu_City[i] >= 16501 && Hsinchu_City[i] < 18001:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/6.png?raw=true"');
+					break;
+				case Hsinchu_City[i] >= 18001:
+					HSZ1.push('<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//苗栗縣ZMI Miaoli
+		for(var i=0; i<Miaoli.length; i++) {
+			switch (true) {
+				case Miaoli[i] >= 0 && Miaoli[i] < 1501:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/1.png?raw=true"');
+					break;
+				case Miaoli[i] >= 1501 && Miaoli[i] < 3001:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/1-1.png?raw=true"');
+					break;
+				case Miaoli[i] >= 3001 && Miaoli[i] < 4501:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/1-2.png?raw=true"');
+					break;
+				case Miaoli[i] >= 4501 && Miaoli[i] < 6001:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/2.png?raw=true"');
+					break;
+				case Miaoli[i] >= 6001 && Miaoli[i] < 7501:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/3.png?raw=true"');
+					break;
+				case Miaoli[i] >= 7501 && Miaoli[i] < 9001:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/3-1.png?raw=true"');
+					break;
+				case Miaoli[i] >= 9001 && Miaoli[i] < 10501:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/3-2.png?raw=true"');
+					break;
+				case Miaoli[i] >= 10501 && Miaoli[i] < 12001:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/4.png?raw=true"');
+					break;
+				case Miaoli[i] >= 12001 && Miaoli[i] < 13501:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/4-1.png?raw=true"');
+					break;
+				case Miaoli[i] >= 13501 && Miaoli[i] < 15001:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/5.png?raw=true"');
+					break;
+				case Miaoli[i] >= 15001 && Miaoli[i] < 16501:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/5-1.png?raw=true"');
+					break;	
+				case Miaoli[i] >= 16501 && Miaoli[i] < 18001:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/6.png?raw=true"');
+					break;
+				case Miaoli[i] >= 18001:
+					ZMI.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//台中市TXG Taichung
+		for(var i=0; i<Taichung.length; i++) {
+			switch (true) {
+				case Taichung[i] >= 0 && Taichung[i] < 1501:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/1.png?raw=true"');
+					break;
+				case Taichung[i] >= 1501 && Taichung[i] < 3001:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/1-1.png?raw=true"');
+					break;
+				case Taichung[i] >= 3001 && Taichung[i] < 4501:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/1-2.png?raw=true"');
+					break;
+				case Taichung[i] >= 4501 && Taichung[i] < 6001:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/2.png?raw=true"');
+					break;
+				case Taichung[i] >= 6001 && Taichung[i] < 7501:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/3.png?raw=true"');
+					break;
+				case Taichung[i] >= 7501 && Taichung[i] < 9001:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/3-1.png?raw=true"');
+					break;
+				case Taichung[i] >= 9001 && Taichung[i] < 10501:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/3-2.png?raw=true"');
+					break;
+				case Taichung[i] >= 10501 && Taichung[i] < 12001:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/4.png?raw=true"');
+					break;
+				case Taichung[i] >= 12001 && Taichung[i] < 13501:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/4-1.png?raw=true"');
+					break;
+				case Taichung[i] >= 13501 && Taichung[i] < 15001:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/5.png?raw=true"');
+					break;
+				case Taichung[i] >= 15001 && Taichung[i] < 16501:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/5-1.png?raw=true"');
+					break;	
+				case Taichung[i] >= 16501 && Taichung[i] < 18001:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/6.png?raw=true"');
+					break;
+				case Taichung[i] >= 18001:
+					TXG.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//彰化縣CHW Changhua
+		for(var i=0; i<Changhua.length; i++) {
+			switch (true) {
+				case Changhua[i] >= 0 && Changhua[i] < 1501:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/1.png?raw=true"');
+					break;
+				case Changhua[i] >= 1501 && Changhua[i] < 3001:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/1-1.png?raw=true"');
+					break;
+				case Changhua[i] >= 3001 && Changhua[i] < 4501:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/1-2.png?raw=true"');
+					break;
+				case Changhua[i] >= 4501 && Changhua[i] < 6001:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/2.png?raw=true"');
+					break;
+				case Changhua[i] >= 6001 && Changhua[i] < 7501:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/3.png?raw=true"');
+					break;
+				case Changhua[i] >= 7501 && Changhua[i] < 9001:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/3-1.png?raw=true"');
+					break;
+				case Changhua[i] >= 9001 && Changhua[i] < 10501:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/3-2.png?raw=true"');
+					break;
+				case Changhua[i] >= 10501 && Changhua[i] < 12001:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/4.png?raw=true"');
+					break;
+				case Changhua[i] >= 12001 && Changhua[i] < 13501:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/4-1.png?raw=true"');
+					break;
+				case Changhua[i] >= 13501 && Changhua[i] < 15001:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/5.png?raw=true"');
+					break;
+				case Changhua[i] >= 15001 && Changhua[i] < 16501:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/5-1.png?raw=true"');
+					break;	
+				case Changhua[i] >= 16501 && Changhua[i] < 18001:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/6.png?raw=true"');
+					break;
+				case Changhua[i] >= 18001:
+					CHW.push('<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//南投縣NTC Nantou
+		for(var i=0; i<Nantou.length; i++) {
+			switch (true) {
+				case Nantou[i] >= 0 && Nantou[i] < 1501:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/1.png?raw=true"');
+					break;
+				case Nantou[i] >= 1501 && Nantou[i] < 3001:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/1-1.png?raw=true"');
+					break;
+				case Nantou[i] >= 3001 && Nantou[i] < 4501:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/1-2.png?raw=true"');
+					break;
+				case Nantou[i] >= 4501 && Nantou[i] < 6001:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/2.png?raw=true"');
+					break;
+				case Nantou[i] >= 6001 && Nantou[i] < 7501:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/3.png?raw=true"');
+					break;
+				case Nantou[i] >= 7501 && Nantou[i] < 9001:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/3-1.png?raw=true"');
+					break;
+				case Nantou[i] >= 9001 && Nantou[i] < 10501:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/3-2.png?raw=true"');
+					break;
+				case Nantou[i] >= 10501 && Nantou[i] < 12001:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/4.png?raw=true"');
+					break;
+				case Nantou[i] >= 12001 && Nantou[i] < 13501:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/4-1.png?raw=true"');
+					break;
+				case Nantou[i] >= 13501 && Nantou[i] < 15001:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/5.png?raw=true"');
+					break;
+				case Nantou[i] >= 15001 && Nantou[i] < 16501:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/5-1.png?raw=true"');
+					break;	
+				case Nantou[i] >= 16501 && Nantou[i] < 18001:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/6.png?raw=true"');
+					break;
+				case Nantou[i] >= 18001:
+					NTC.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//雲林縣YUN Yunlin
+		for(var i=0; i<Yunlin.length; i++) {
+			switch (true) {
+				case Yunlin[i] >= 0 && Yunlin[i] < 1501:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/1.png?raw=true"');
+					break;
+				case Yunlin[i] >= 1501 && Yunlin[i] < 3001:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/1-1.png?raw=true"');
+					break;
+				case Yunlin[i] >= 3001 && Yunlin[i] < 4501:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/1-2.png?raw=true"');
+					break;
+				case Yunlin[i] >= 4501 && Yunlin[i] < 6001:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/2.png?raw=true"');
+					break;
+				case Yunlin[i] >= 6001 && Yunlin[i] < 7501:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/3.png?raw=true"');
+					break;
+				case Yunlin[i] >= 7501 && Yunlin[i] < 9001:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/3-1.png?raw=true"');
+					break;
+				case Yunlin[i] >= 9001 && Yunlin[i] < 10501:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/3-2.png?raw=true"');
+					break;
+				case Yunlin[i] >= 10501 && Yunlin[i] < 12001:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/4.png?raw=true"');
+					break;
+				case Yunlin[i] >= 12001 && Yunlin[i] < 13501:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/4-1.png?raw=true"');
+					break;
+				case Yunlin[i] >= 13501 && Yunlin[i] < 15001:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/5.png?raw=true"');
+					break;
+				case Yunlin[i] >= 15001 && Yunlin[i] < 16501:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/5-1.png?raw=true"');
+					break;	
+				case Yunlin[i] >= 16501 && Yunlin[i] < 18001:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/6.png?raw=true"');
+					break;
+				case Yunlin[i] >= 18001:
+					YUN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//嘉義縣CYI0 Chiayi_County
+		for(var i=0; i<Chiayi_County.length; i++) {
+			switch (true) {
+				case Chiayi_County[i] >= 0 && Chiayi_County[i] < 1501:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/1.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 1501 && Chiayi_County[i] < 3001:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/1-1.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 3001 && Chiayi_County[i] < 4501:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/1-2.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 4501 && Chiayi_County[i] < 6001:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/2.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 6001 && Chiayi_County[i] < 7501:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/3.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 7501 && Chiayi_County[i] < 9001:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/3-1.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 9001 && Chiayi_County[i] < 10501:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/3-2.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 10501 && Chiayi_County[i] < 12001:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/4.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 12001 && Chiayi_County[i] < 13501:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/4-1.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 13501 && Chiayi_County[i] < 15001:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/5.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 15001 && Chiayi_County[i] < 16501:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/5-1.png?raw=true"');
+					break;	
+				case Chiayi_County[i] >= 16501 && Chiayi_County[i] < 18001:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/6.png?raw=true"');
+					break;
+				case Chiayi_County[i] >= 18001:
+					CYI0.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//嘉義市CYI1 Chiayi_City
+		for(var i=0; i<Chiayi_City.length; i++) {
+			switch (true) {
+				case Chiayi_City[i] >= 0 && Chiayi_City[i] < 1501:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/1.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 1501 && Chiayi_City[i] < 3001:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/1-1.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 3001 && Chiayi_City[i] < 4501:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/1-2.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 4501 && Chiayi_City[i] < 6001:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/2.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 6001 && Chiayi_City[i] < 7501:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/3.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 7501 && Chiayi_City[i] < 9001:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/3-1.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 9001 && Chiayi_City[i] < 10501:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/3-2.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 10501 && Chiayi_City[i] < 12001:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/4.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 12001 && Chiayi_City[i] < 13501:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/4-1.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 13501 && Chiayi_City[i] < 15001:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/5.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 15001 && Chiayi_City[i] < 16501:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/5-1.png?raw=true"');
+					break;	
+				case Chiayi_City[i] >= 16501 && Chiayi_City[i] < 18001:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/6.png?raw=true"');
+					break;
+				case Chiayi_City[i] >= 18001:
+					CYI1.push('<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//台南市TNN Tainan
+		for(var i=0; i<Tainan.length; i++) {
+			switch (true) {
+				case Tainan[i] >= 0 && Tainan[i] < 1501:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/1.png?raw=true"');
+					break;
+				case Tainan[i] >= 1501 && Tainan[i] < 3001:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/1-1.png?raw=true"');
+					break;
+				case Tainan[i] >= 3001 && Tainan[i] < 4501:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/1-2.png?raw=true"');
+					break;
+				case Tainan[i] >= 4501 && Tainan[i] < 6001:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/2.png?raw=true"');
+					break;
+				case Tainan[i] >= 6001 && Tainan[i] < 7501:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/3.png?raw=true"');
+					break;
+				case Tainan[i] >= 7501 && Tainan[i] < 9001:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/3-1.png?raw=true"');
+					break;
+				case Tainan[i] >= 9001 && Tainan[i] < 10501:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/3-2.png?raw=true"');
+					break;
+				case Tainan[i] >= 10501 && Tainan[i] < 12001:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/4.png?raw=true"');
+					break;
+				case Tainan[i] >= 12001 && Tainan[i] < 13501:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/4-1.png?raw=true"');
+					break;
+				case Tainan[i] >= 13501 && Tainan[i] < 15001:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/5.png?raw=true"');
+					break;
+				case Tainan[i] >= 15001 && Tainan[i] < 16501:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/5-1.png?raw=true"');
+					break;	
+				case Tainan[i] >= 16501 && Tainan[i] < 18001:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/6.png?raw=true"');
+					break;
+				case Tainan[i] >= 18001:
+					TNN.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//高雄市KHH Kaohsiung
+		for(var i=0; i<Kaohsiung.length; i++) {
+			switch (true) {
+				case Kaohsiung[i] >= 0 && Kaohsiung[i] < 1501:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/1.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 1501 && Kaohsiung[i] < 3001:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/1-1.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 3001 && Kaohsiung[i] < 4501:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/1-2.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 4501 && Kaohsiung[i] < 6001:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/2.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 6001 && Kaohsiung[i] < 7501:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/3.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 7501 && Kaohsiung[i] < 9001:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/3-1.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 9001 && Kaohsiung[i] < 10501:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/3-2.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 10501 && Kaohsiung[i] < 12001:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/4.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 12001 && Kaohsiung[i] < 13501:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/4-1.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 13501 && Kaohsiung[i] < 15001:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/5.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 15001 && Kaohsiung[i] < 16501:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/5-1.png?raw=true"');
+					break;	
+				case Kaohsiung[i] >= 16501 && Kaohsiung[i] < 18001:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/6.png?raw=true"');
+					break;
+				case Kaohsiung[i] >= 18001:
+					KHH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%AB%98%E9%9B%84%E5%B8%82/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//屏東縣PIF Pingtung
+		for(var i=0; i<Pingtung.length; i++) {
+			switch (true) {
+				case Pingtung[i] >= 0 && Pingtung[i] < 1501:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/1.png?raw=true"');
+					break;
+				case Pingtung[i] >= 1501 && Pingtung[i] < 3001:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/1-1.png?raw=true"');
+					break;
+				case Pingtung[i] >= 3001 && Pingtung[i] < 4501:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/1-2.png?raw=true"');
+					break;
+				case Pingtung[i] >= 4501 && Pingtung[i] < 6001:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/2.png?raw=true"');
+					break;
+				case Pingtung[i] >= 6001 && Pingtung[i] < 7501:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/3.png?raw=true"');
+					break;
+				case Pingtung[i] >= 7501 && Pingtung[i] < 9001:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/3-1.png?raw=true"');
+					break;
+				case Pingtung[i] >= 9001 && Pingtung[i] < 10501:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/3-2.png?raw=true"');
+					break;
+				case Pingtung[i] >= 10501 && Pingtung[i] < 12001:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/4.png?raw=true"');
+					break;
+				case Pingtung[i] >= 12001 && Pingtung[i] < 13501:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/4-1.png?raw=true"');
+					break;
+				case Pingtung[i] >= 13501 && Pingtung[i] < 15001:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/5.png?raw=true"');
+					break;
+				case Pingtung[i] >= 15001 && Pingtung[i] < 16501:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/5-1.png?raw=true"');
+					break;	
+				case Pingtung[i] >= 16501 && Pingtung[i] < 18001:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/6.png?raw=true"');
+					break;
+				case Pingtung[i] >= 18001:
+					PIF.push('<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//宜蘭縣ILA Yilan
+		for(var i=0; i<Yilan.length; i++) {
+			switch (true) {
+				case Yilan[i] >= 0 && Yilan[i] < 1501:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/1.png?raw=true"');
+					break;
+				case Yilan[i] >= 1501 && Yilan[i] < 3001:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/1-1.png?raw=true"');
+					break;
+				case Yilan[i] >= 3001 && Yilan[i] < 4501:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/1-2.png?raw=true"');
+					break;
+				case Yilan[i] >= 4501 && Yilan[i] < 6001:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/2.png?raw=true"');
+					break;
+				case Yilan[i] >= 6001 && Yilan[i] < 7501:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/3.png?raw=true"');
+					break;
+				case Yilan[i] >= 7501 && Yilan[i] < 9001:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/3-1.png?raw=true"');
+					break;
+				case Yilan[i] >= 9001 && Yilan[i] < 10501:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/3-2.png?raw=true"');
+					break;
+				case Yilan[i] >= 10501 && Yilan[i] < 12001:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/4.png?raw=true"');
+					break;
+				case Yilan[i] >= 12001 && Yilan[i] < 13501:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/4-1.png?raw=true"');
+					break;
+				case Yilan[i] >= 13501 && Yilan[i] < 15001:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/5.png?raw=true"');
+					break;
+				case Yilan[i] >= 15001 && Yilan[i] < 16501:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/5-1.png?raw=true"');
+					break;	
+				case Yilan[i] >= 16501 && Yilan[i] < 18001:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/6.png?raw=true"');
+					break;
+				case Yilan[i] >= 18001:
+					ILA.push('<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//花蓮縣HUN Hualien
+		for(var i=0; i<Hualien.length; i++) {
+			switch (true) {
+				case Hualien[i] >= 0 && Hualien[i] < 1501:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/1.png?raw=true"');
+					break;
+				case Hualien[i] >= 1501 && Hualien[i] < 3001:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/1-1.png?raw=true"');
+					break;
+				case Hualien[i] >= 3001 && Hualien[i] < 4501:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/1-2.png?raw=true"');
+					break;
+				case Hualien[i] >= 4501 && Hualien[i] < 6001:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/2.png?raw=true"');
+					break;
+				case Hualien[i] >= 6001 && Hualien[i] < 7501:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/3.png?raw=true"');
+					break;
+				case Hualien[i] >= 7501 && Hualien[i] < 9001:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/3-1.png?raw=true"');
+					break;
+				case Hualien[i] >= 9001 && Hualien[i] < 10501:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/3-2.png?raw=true"');
+					break;
+				case Hualien[i] >= 10501 && Hualien[i] < 12001:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/4.png?raw=true"');
+					break;
+				case Hualien[i] >= 12001 && Hualien[i] < 13501:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/4-1.png?raw=true"');
+					break;
+				case Hualien[i] >= 13501 && Hualien[i] < 15001:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/5.png?raw=true"');
+					break;
+				case Hualien[i] >= 15001 && Hualien[i] < 16501:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/5-1.png?raw=true"');
+					break;	
+				case Hualien[i] >= 16501 && Hualien[i] < 18001:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/6.png?raw=true"');
+					break;
+				case Hualien[i] >= 18001:
+					HUN.push('<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//台東縣TTT Taitung
+		for(var i=0; i<Taitung.length; i++) {
+			switch (true) {
+				case Taitung[i] >= 0 && Taitung[i] < 1501:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/1.png?raw=true"');
+					break;
+				case Taitung[i] >= 1501 && Taitung[i] < 3001:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/1-1.png?raw=true"');
+					break;
+				case Taitung[i] >= 3001 && Taitung[i] < 4501:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/1-2.png?raw=true"');
+					break;
+				case Taitung[i] >= 4501 && Taitung[i] < 6001:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/2.png?raw=true"');
+					break;
+				case Taitung[i] >= 6001 && Taitung[i] < 7501:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/3.png?raw=true"');
+					break;
+				case Taitung[i] >= 7501 && Taitung[i] < 9001:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/3-1.png?raw=true"');
+					break;
+				case Taitung[i] >= 9001 && Taitung[i] < 10501:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/3-2.png?raw=true"');
+					break;
+				case Taitung[i] >= 10501 && Taitung[i] < 12001:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/4.png?raw=true"');
+					break;
+				case Taitung[i] >= 12001 && Taitung[i] < 13501:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/4-1.png?raw=true"');
+					break;
+				case Taitung[i] >= 13501 && Taitung[i] < 15001:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/5.png?raw=true"');
+					break;
+				case Taitung[i] >= 15001 && Taitung[i] < 16501:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/5-1.png?raw=true"');
+					break;	
+				case Taitung[i] >= 16501 && Taitung[i] < 18001:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/6.png?raw=true"');
+					break;
+				case Taitung[i] >= 18001:
+					TTT.push('<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//澎湖縣PEH Penghu
+		for(var i=0; i<Penghu.length; i++) {
+			switch (true) {
+				case Penghu[i] >= 0 && Penghu[i] < 1501:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/1.png?raw=true"');
+					break;
+				case Penghu[i] >= 1501 && Penghu[i] < 3001:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/1-1.png?raw=true"');
+					break;
+				case Penghu[i] >= 3001 && Penghu[i] < 4501:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/1-2.png?raw=true"');
+					break;
+				case Penghu[i] >= 4501 && Penghu[i] < 6001:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/2.png?raw=true"');
+					break;
+				case Penghu[i] >= 6001 && Penghu[i] < 7501:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/3.png?raw=true"');
+					break;
+				case Penghu[i] >= 7501 && Penghu[i] < 9001:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/3-1.png?raw=true"');
+					break;
+				case Penghu[i] >= 9001 && Penghu[i] < 10501:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/3-2.png?raw=true"');
+					break;
+				case Penghu[i] >= 10501 && Penghu[i] < 12001:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/4.png?raw=true"');
+					break;
+				case Penghu[i] >= 12001 && Penghu[i] < 13501:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/4-1.png?raw=true"');
+					break;
+				case Penghu[i] >= 13501 && Penghu[i] < 15001:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/5.png?raw=true"');
+					break;
+				case Penghu[i] >= 15001 && Penghu[i] < 16501:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/5-1.png?raw=true"');
+					break;	
+				case Penghu[i] >= 16501 && Penghu[i] < 18001:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/6.png?raw=true"');
+					break;
+				case Penghu[i] >= 18001:
+					PEH.push('<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		
+		//金門縣KNH Kinmen
+		for(var i=0; i<Kinmen.length; i++) {
+			switch (true) {
+				case Kinmen[i] >= 0 && Kinmen[i] < 1501:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/1.png?raw=true"');
+					break;
+				case Kinmen[i] >= 1501 && Kinmen[i] < 3001:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/1-1.png?raw=true"');
+					break;
+				case Kinmen[i] >= 3001 && Kinmen[i] < 4501:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/1-2.png?raw=true"');
+					break;
+				case Kinmen[i] >= 4501 && Kinmen[i] < 6001:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/2.png?raw=true"');
+					break;
+				case Kinmen[i] >= 6001 && Kinmen[i] < 7501:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/3.png?raw=true"');
+					break;
+				case Kinmen[i] >= 7501 && Kinmen[i] < 9001:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/3-1.png?raw=true"');
+					break;
+				case Kinmen[i] >= 9001 && Kinmen[i] < 10501:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/3-2.png?raw=true"');
+					break;
+				case Kinmen[i] >= 10501 && Kinmen[i] < 12001:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/4.png?raw=true"');
+					break;
+				case Kinmen[i] >= 12001 && Kinmen[i] < 13501:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/4-1.png?raw=true"');
+					break;
+				case Kinmen[i] >= 13501 && Kinmen[i] < 15001:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/5.png?raw=true"');
+					break;
+				case Kinmen[i] >= 15001 && Kinmen[i] < 16501:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/5-1.png?raw=true"');
+					break;	
+				case Kinmen[i] >= 16501 && Kinmen[i] < 18001:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/6.png?raw=true"');
+					break;
+				case Kinmen[i] >= 18001:
+					KNH.push('<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//連江縣LNN Lienchiang
+		for(var i=0; i<Lienchiang.length; i++) {
+			switch (true) {
+				case Lienchiang[i] >= 0 && Lienchiang[i] < 1501:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/1.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 1501 && Lienchiang[i] < 3001:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/1-1.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 3001 && Lienchiang[i] < 4501:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/1-2.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 4501 && Lienchiang[i] < 6001:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/2.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 6001 && Lienchiang[i] < 7501:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/3.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 7501 && Lienchiang[i] < 9001:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/3-1.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 9001 && Lienchiang[i] < 10501:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/3-2.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 10501 && Lienchiang[i] < 12001:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/4.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 12001 && Lienchiang[i] < 13501:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/4-1.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 13501 && Lienchiang[i] < 15001:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/5.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 15001 && Lienchiang[i] < 16501:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/5-1.png?raw=true"');
+					break;	
+				case Lienchiang[i] >= 16501 && Lienchiang[i] < 18001:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/6.png?raw=true"');
+					break;
+				case Lienchiang[i] >= 18001:
+					LNN.push('<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/6-1.png?raw=true"');
+					break;					
+			}
+		};
+		
+		//設定每半秒執行一次
+		clear = setInterval(function() {run();}, 500);
+		
+		//循序播放
+		function run() {
+			document.getElementById("data_KEL").innerHTML = KEL[index] + 'id="img_KEL"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">基隆市</h2><p class="box-body_0">總共:{{ data_KEL }}人</p></div>';
+			document.getElementById("data_NTPC").innerHTML = NTPC[index] + 'id="img_NTPC"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">新北市</h2><p class="box-body_0">總共:{{ data_NTPC }}人</p></div>';
+			document.getElementById("data_TPE").innerHTML = TPE[index] + 'id="img_TPE"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">台北市</h2><p class="box-body_0">總共:{{ data_TPE }}人</p></div>';
+			document.getElementById("data_TYN").innerHTML = TYN[index] + 'id="img_TYN"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">桃園市</h2><p class="box-body_0">總共:{{ data_TYN }}人</p></div>';
+			document.getElementById("data_HSZ_0").innerHTML = HSZ0[index] + 'id="img_HSZ_0"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">新竹縣</h2><p class="box-body_0">總共:{{ data_HSZ0 }}人</p></div>';
+			document.getElementById("data_HSZ_1").innerHTML = HSZ1[index] + 'id="img_HSZ_1"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">新竹市</h2><p class="box-body_0">總共:{{ data_HSZ1 }}人</p></div>';
+			document.getElementById("data_ZMI").innerHTML = ZMI[index] + 'id="img_ZMI"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">苗栗縣</h2><p class="box-body_0">總共:{{ data_ZMI }}人</p></div>';
+			document.getElementById("data_TXG").innerHTML = TXG[index] + 'id="img_TXG"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">台中縣</h2><p class="box-body_0">總共:{{ data_TXG }}人</p></div>';
+			document.getElementById("data_CHW").innerHTML = CHW[index] + 'id="img_CHW"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">彰化縣</h2><p class="box-body_0">總共:{{ data_CHW }}人</p></div>';
+			document.getElementById("data_NTC").innerHTML = NTC[index] + 'id="img_NTC"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">南投縣</h2><p class="box-body_0">總共:{{ data_NTC }}人</p></div>';
+			document.getElementById("data_YUN").innerHTML = YUN[index] + 'id="img_YUN"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">雲林縣</h2><p class="box-body_0">總共:{{ data_YUN }}人</p></div>';
+			document.getElementById("data_CYI_0").innerHTML = CYI0[index] + 'id="img_CYI_0"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">嘉義縣</h2><p class="box-body_0">總共:{{ data_CYI0 }}人</p></div>';
+			document.getElementById("data_CYI_1").innerHTML = CYI1[index] + 'id="img_CYI_1"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">嘉義市</h2><p class="box-body_0">總共:{{ data_CYI1 }}人</p></div>';
+			document.getElementById("data_TNN").innerHTML = TNN[index] + 'id="img_TNN"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">台南市</h2><p class="box-body_0">總共:{{ data_TNN }}人</p>
+			document.getElementById("data_KHH").innerHTML = KHH[index] + 'id="img_KHH"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">高雄市</h2><p class="box-body_0">總共:{{ data_KHH }}人</p></div>';
+			document.getElementById("data_PIF").innerHTML = PIF[index] + 'id="img_PIF"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">屏東縣</h2><p class="box-body_0">總共:{{ data_PIF }}人</p></div>';
+			document.getElementById("data_ILA").innerHTML = ILA[index] + 'id="img_ILA"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">宜蘭縣</h2><p class="box-body_0">總共:{{ data_ILA }}人</p></div>';
+			document.getElementById("data_HUN").innerHTML = HUN[index] + 'id="img_HUN"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">花蓮縣</h2><p class="box-body_0">總共:{{ data_HUN }}人</p></div>';
+			document.getElementById("data_TTT").innerHTML = TTT[index] + 'id="img_TTT"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">台東縣</h2><p class="box-body_0">總共:{{ data_TTT }}人</p></div>';
+			document.getElementById("data_PEH").innerHTML = PEH[index] + 'id="img_PEH"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">澎湖縣</h2><p class="box-body_0">總共:{{ data_PEH }}人</p></div>';
+			document.getElementById("data_KNH").innerHTML = KNH[index] + 'id="img_KNH"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">金門縣</h2><p class="box-body_0">總共:{{ data_KNH }}人</p></div>';
+			document.getElementById("data_LNN").innerHTML = LNN[index] + 'id="img_LNN"/>' + '<div class="box-hover-text_0"><h2 class="box-body_0">連江縣</h2><p class="box-body_0">總共:{{ data_LNN }}人</p></div>';
+			
+			index++;
+			if(index == Taichung.length) {
+				clearInterval(clear);
+			}
+		}
+    </script>
+	
     <style type="text/css">
         /* CSS */
 		
@@ -56,6 +1114,30 @@
             overflow: hidden;
             visibility: hidden;
         }
+
+        element.style {
+            position: absolute;
+            transform-origin: 0px 0px 0px;
+            inset: 0px auto auto 0px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            touch-action: pan-y;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            backface-visibility: hidden;
+            opacity: 1;
+        }
+
+        .marker, .zoomHolder img {
+            display: block;
+        }
+        .img-responsive, .tab-content-3>img1 {
+            display: block;
+            max-width: 100%;
+            height: 400px;
+			width: 300px;
+        }
+		
         
 		#img_color {position:absolute; top:260px; left:920px;z-index:1;width:100px;height:350px;}
         #img_LNN {position:absolute; top:190px; left:612px;z-index:11;width:82px;height:57px;} 
@@ -97,8 +1179,8 @@
 
 		.box:hover .box-hover-text_0 {
 			border-radius:20px;
-			top:498px;
-			left:590px;
+			top:448px;
+			left:480px;
 			display: block;
 		}
 
@@ -124,7 +1206,8 @@
 		  padding: 15px;
 		  line-height: 0.8em;
 		}
-
+		
+		
         /*第一筆的底色*/
         span:target ~ #tab > ul li:first-child a {
             background: #C71585;
@@ -138,30 +1221,21 @@
 
         /*頁籤變換&第一筆*/
         span ~ #tab > ul li:first-child a,
-        #tab-1:target ~ #tab > ul li a[href$="#tab-1"],
-		#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
-        #tab-3:target ~ #tab > ul li a[href$="#tab-3"],
-		#tab-4:target ~ #tab > ul li a[href$="#tab-4"]{
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"] {
             background: #fff;
             border-radius: 5px 5px 0 0;
             font-size:20px;
         }
 
         span ~ #tab > ul li:first-child a::before,
-        #tab-1:target ~ #tab > ul li a[href$="#tab-1"]::before,
-		#tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before,
-        #tab-3:target ~ #tab > ul li a[href$="#tab-3"]::before,
-		#tab-4:target ~ #tab > ul li a[href$="#tab-4"]::before{
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"]::before{
             background-color: white;
             height: 100%;
         }
 
         /*頁籤內容顯示&第一筆*/
         span ~ #tab > div:first-of-type,
-        #tab-1:target ~ #tab > div.tab-content-1,
-		#tab-2:target ~ #tab > div.tab-content-2,
-        #tab-3:target ~ #tab > div.tab-content-3,
-		#tab-4:target ~ #tab > div.tab-content-4{
+        #tab-3:target ~ #tab > div.tab-content-3{
             visibility: visible;
             height: 500px;
             background: #fff;
@@ -171,12 +1245,7 @@
             display: none;
         }
 		
-		nav.tab1{
-            font-family:"標楷體";
-			font-size:22px;
-			text-align:center;
-		}
-		nav.tab4{
+		nav{
             font-family:"標楷體";
 			font-size:22px;
 			text-align:center;
@@ -189,19 +1258,7 @@
 		    font-family:"標楷體";
 			color:black;
 		}
-		#policy{
-		    font-family:"標楷體";
-			color:black;
-		}
-		#use{
-		    font-family:"標楷體";
-			color:black;
-		}
-		#theme{
-		    font-family:"標楷體";
-			color:black;
-		}
-		#google{
+		 #policy{
 		    font-family:"標楷體";
 			color:black;
 		}
@@ -210,458 +1267,398 @@
 <body>
         <div class="auto-style1"><a><b>預測COVID-19感染人數變化</b></a></div><br />
             <!-- HTML -->
-            <span id="tab-1">最新公告</span>
-			<span id="tab-2">預測感染人數變化</span>
             <span id="tab-3">查詢全國感染人數</span>
-            <span id="tab-4">使用說明</span>
-			
 
             <!-- 頁籤按鈕 -->
             <div id="tab">
                 <ul>
-                    <li><a href="#tab-1">最新公告</a></li>
-					<li><a href="#tab-2">預測感染人數變化</a></li>
                     <li><a href="#tab-3">查詢全國感染人數</a></li>
-                    <li><a href="#tab-4">使用說明</a></li>
                 </ul>
 
             <!-- 頁籤的內容區塊 -->
-                <div class="tab-content-1" style="overflow-x:auto;overflow-y:auto;background:white;">
-					<nav class="tab1">
-					<br>
-						<a href="#policy" style="text-decoration:none;">  | 居家隔離政策 |</a>
-						<a href="#entry" style="text-decoration:none;">  | 入境檢疫政策 |</a>
-						<a href="#reporter" style="text-decoration:none;">  | 記者會直播 |</a>
-					    <a href="#page" style="text-decoration:none;">  | 防疫紀錄片 |</a>
-					</nav>
-					
-						<hr></hr>
-						
-					<p id="policy"><h3>居家隔離政策</h3></p>
-					<a href="https://www.cdc.gov.tw/File/Get/NwXOgLYkWuHwk4xOjHzLWA" target="_blank" title="2023/02/20起，室內戴口罩規定放寬.pdf(另開新視窗)" 
-					   style="text-decoration:none;">2023/02/20起，室內戴口罩規定放寬.pdf</a>
-					
-					<p id="entry"><h3>入境檢疫政策</h3></p>
-					<a href="https://www.cdc.gov.tw/ArrivalQuarantine/info.html" target="_blank" title="旅客來臺COVID-19入境檢疫及醫療資訊網" 
-					   style="text-decoration:none;">旅客來臺COVID-19入境檢疫及醫療資訊網</a>
-                    
-					<p id="reporter"><h3>記者會直播</h3></p>
-					<iframe width="768" height="432" src="https://www.youtube.com/embed/oyflMvGjH7w" 
-					        title="2023/4/27 14:00 中央流行疫情指揮中心嚴重特殊傳染性肺炎記者會" 
-							frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					
-					<p id="page"><h3>臺灣 COVID-19防疫一週年紀錄片</h3></p>
-					<iframe width="424" height="238" src="https://www.youtube.com/embed/FHSKtyfqGJU" title="《我們》─守護臺灣 COVID-19防疫一週年紀錄片" 
-					        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>				
-					
-				</div>
-				
-				<div class="tab-content-2" style="overflow-x:auto;overflow-y:auto;background:white;">
-				<br><br><br><br>
+                
+                
+                <div class="tab-content-3" style="overflow-x:auto;overflow-y:auto;background:white;">
+				<br>
 				
 					<div align="left">
-					      <form method="post" action={{url_for('third_web')}}>
-					      <label for="input_choosedate"><h2>&emsp;&emsp;請選擇天數：</h2></label>
-					      <label>&emsp;&emsp;&emsp;<input type="radio" id="input_choosedate" name="user_input" value="一周">一周</label>
-					      <br><label>&emsp;&emsp;&emsp;<input type="radio" id="input_choosedate" name="user_input" value="一月">一月</label>
-					      <br><br>
-					      <!--<input type="submit">-->
-					      &emsp;&emsp;&emsp;<button type="submit" class="btn btn-primary">預測</button>
-					      </form>
+						<h2> 
+							 &emsp;天數：<br>&emsp;&emsp;{{user_input}} <br> 
+							 &emsp;日期：<br>&emsp;&emsp;{{user_date}}<br> &emsp;&emsp;至 <br>&emsp;&emsp;{{user_date_}} 
+						</h2>
 					</div>
+					<div align="left">
+					<br>
+						<h2>&emsp;全國總確診人數：
+						<br>&emsp;&emsp;共{{data_allin}}人</h2>
+					<br>
+						<h2>&emsp;全國當天確診人數：</h2>
+						<div style="height:210px;width:330px;overflow-x:auto;overflow-y:auto;background:white;">
+							&emsp;{% for key,value in list_all.items() %}
+							 <h2>&emsp;{{ key }}：{{ value }}</h2>
+							&emsp;{% endfor %}
+							<br><br><br>
+						</div>
+					</div>
+                   
+				   <!------------------------------------------------------3-------------------------------------------------------->
+				   <img src="https://github.com/zu-z/project/blob/main/%E9%A1%8F%E8%89%B2%E5%8D%80%E9%96%93.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_color'>
 					
-					<!------------------------------------------------------1-------------------------------------------------------->
-				   
-					<img src="https://github.com/zu-z/project/blob/main/%E9%A1%8F%E8%89%B2%E5%8D%80%E9%96%93.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_color'>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_LNN'>
+						<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_LNN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 連江縣 </h2>
+								<h2 class="box-body_0">連江縣</h2>
+								<p class="box-body_0">總共:{{ data_LNN }}人</p>
 							</div>
 				    </div>
 						
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KNH'>
+						<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KNH'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 金門縣 </h2>
+								<h2 class="box-body_0">金門縣</h2>
+								<p class="box-body_0">總共:{{ data_KNH }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_PEH'>
+						<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_PEH'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 澎湖縣 </h2>
+								<h2 class="box-body_0">澎湖縣</h2>
+								<p class="box-body_0">總共:{{ data_PEH }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TTT'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TTT'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 台東縣 </h2>
+								<h2 class="box-body_0">台東縣</h2>
+								<p class="box-body_0">總共:{{ data_TTT }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HUN'>
+						<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HUN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 花蓮縣 </h2>
+								<h2 class="box-body_0">花蓮縣</h2>
+								<p class="box-body_0">總共:{{ data_HUN }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_ILA'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_ILA'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 宜蘭縣 </h2>
+								<h2 class="box-body_0">宜蘭縣</h2>
+								<p class="box-body_0">總共:{{ data_ILA }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_PIF'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_PIF'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 屏東縣 </h2>
+								<h2 class="box-body_0">屏東縣</h2>
+								<p class="box-body_0">總共:{{ data_PIF }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/0d11a4851e55ec7760d0def41ee99dbcb3dafbaf/%E9%AB%98%E9%9B%84%E5%B8%82/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KHH'>
+						<img src="https://github.com/zu-z/project/blob/0d11a4851e55ec7760d0def41ee99dbcb3dafbaf/%E9%AB%98%E9%9B%84%E5%B8%82/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KHH'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 高雄市 </h2>
+								<h2 class="box-body_0">高雄市</h2>
+								<p class="box-body_0">總共:{{ data_KHH }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TNN'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TNN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 台南市 </h2>
+								<h2 class="box-body_0">台南市</h2>
+								<p class="box-body_0">總共:{{ data_TNN }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CYI_1'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CYI_1'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 嘉義市 </h2>
+								<h2 class="box-body_0">嘉義市</h2>
+								<p class="box-body_0">總共:{{ data_CYI1 }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CYI_0'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CYI_0'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 嘉義縣 </h2>
+								<h2 class="box-body_0">嘉義縣</h2>
+								<p class="box-body_0">總共:{{ data_CYI0 }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_YUN'>
+						<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_YUN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 雲林縣 </h2>
+								<h2 class="box-body_0">雲林縣</h2>
+								<p class="box-body_0">總共:{{ data_YUN }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_NTC'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_NTC'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0"> 南投縣 </h2>
+									<h2 class="box-body_0">南投縣</h2>
+									<p class="box-body_0">總共:{{ data_NTC }}人</p>
 								</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CHW'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CHW'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0"> 彰化縣 </h2>
+									<h2 class="box-body_0">彰化縣</h2>
+									<p class="box-body_0">總共:{{ data_CHW }}人</p>
 								</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0"> 台中市 </h2>
+									<h2 class="box-body_0">台中市</h2>
+									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/1.png?raw=true" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_ZMI'>
+						<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/3.png?raw=true" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_ZMI'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0"> 苗栗縣 </h2>
+									<h2 class="box-body_0">苗栗縣</h2>
+									<p class="box-body_0">總共:{{ data_ZMI }}人</p>
 								</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HSZ_1'>
+						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HSZ_1'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 新竹市 </h2>
+								<h2 class="box-body_0">新竹市</h2>
+								<p class="box-body_0">總共:{{ data_HSZ1 }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HSZ_0'>
+						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HSZ_0'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 新竹縣 </h2>
+								<h2 class="box-body_0">新竹縣</h2>
+								<p class="box-body_0">總共:{{ data_HSZ0 }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TYN'>
+						<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TYN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 桃園市 </h2>
+								<h2 class="box-body_0">桃園市</h2>
+								<p class="box-body_0">總共:{{ data_TYN }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TPE'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TPE'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 台北市 </h2>
+								<h2 class="box-body_0">台北市</h2>
+								<p class="box-body_0">總共:{{ data_TPE }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_NTPC'>
+						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_NTPC'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 新北市 </h2>
+								<h2 class="box-body_0">新北市</h2>
+								<p class="box-body_0">總共:{{ data_NTPC }}人</p>
 							</div>
 				    </div>
 					
 					<div class="box">
-						<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KEL'>
+						<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/3.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KEL'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 基隆市 </h2>
+								<h2 class="box-body_0">基隆市</h2>
+								<p class="box-body_0">總共:{{ data_KEL }}人</p>
 							</div>
 				    </div>
-				</div>
-                
-                <div class="tab-content-3">
-				<br><br><br><br>
-				
-					<div align="left" style="overflow-x:auto;overflow-y:auto;background:white;">
-					      <form method="post" action={{url_for('second_web')}}>
-					      <label for="input_choosedate"><h2>&emsp;&emsp;請選擇天數：</h2></label>
-					      <label>&emsp;&emsp;&emsp;<input type="radio" id="input_choosedate" name="user_input" value="一天" checked>一天</label>
-					      <br><label>&emsp;&emsp;&emsp;<input type="radio" id="input_choosedate" name="user_input" value="一周">一周</label>
-					      <br><label>&emsp;&emsp;&emsp;<input type="radio" id="input_choosedate" name="user_input" value="一月">一月</label>
-					      <br><br>
-					      <label for="input_date"><h2>&emsp;&emsp;請選擇日期：</h2></label>
-					      &emsp;&emsp;&emsp;<input type="date" id="input_date" name="user_date" value="2020-02-01" min="2020-02-01" max="2022-11-01">
-					      <br><br>
-					      <!--<input type="submit">-->
-					      &emsp;&emsp;&emsp;<button type="submit" class="btn btn-primary">查詢</button>
-					      </form>
-					</div>
-					
 				   <!------------------------------------------------------1-------------------------------------------------------->
 				   
-					<img src="https://github.com/zu-z/project/blob/main/%E9%A1%8F%E8%89%B2%E5%8D%80%E9%96%93.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_color'>
-					
-					<div class="box">
+					<div class="box" id="data_LNN">
 						<img src="https://github.com/zu-z/project/blob/main/%E9%80%A3%E6%B1%9F/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_LNN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 連江縣 </h2>
+								<h2 class="box-body_0">連江縣</h2>
+								<p class="box-body_0">總共:{{ data_LNN }}人</p>
 							</div>
 				    </div>
 						
-					<div class="box">
+					<div class="box" id="data_KNH">
 						<img src="https://github.com/zu-z/project/blob/main/%E9%87%91%E9%96%80/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KNH'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 金門縣 </h2>
+								<h2 class="box-body_0">金門縣</h2>
+								<p class="box-body_0">總共:{{ data_KNH }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_PEH">
 						<img src="https://github.com/zu-z/project/blob/main/%E6%BE%8E%E6%B9%96/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_PEH'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 澎湖縣 </h2>
+								<h2 class="box-body_0">澎湖縣</h2>
+								<p class="box-body_0">總共:{{ data_PEH }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_TTT">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E6%9D%B1/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TTT'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 台東縣 </h2>
+								<h2 class="box-body_0">台東縣</h2>
+								<p class="box-body_0">總共:{{ data_TTT }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_HUN">
 						<img src="https://github.com/zu-z/project/blob/main/%E8%8A%B1%E8%93%AE/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HUN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 花蓮縣 </h2>
+								<h2 class="box-body_0">花蓮縣</h2>
+								<p class="box-body_0">總共:{{ data_HUN }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_ILA">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%AE%9C%E8%98%AD/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_ILA'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 宜蘭縣 </h2>
+								<h2 class="box-body_0">宜蘭縣</h2>
+								<p class="box-body_0">總共:{{ data_ILA }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_PIF">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%B1%8F%E6%9D%B1/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_PIF'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 屏東縣 </h2>
+								<h2 class="box-body_0">屏東縣</h2>
+								<p class="box-body_0">總共:{{ data_PIF }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_KHH">
 						<img src="https://github.com/zu-z/project/blob/0d11a4851e55ec7760d0def41ee99dbcb3dafbaf/%E9%AB%98%E9%9B%84%E5%B8%82/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KHH'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 高雄市 </h2>
+								<h2 class="box-body_0">高雄市</h2>
+								<p class="box-body_0">總共:{{ data_KHH }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_TNN">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8D%97%E5%B8%82/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TNN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 台南市 </h2>
+								<h2 class="box-body_0">台南市</h2>
+								<p class="box-body_0">總共:{{ data_TNN }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_CYI_1">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E5%B8%82/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CYI_1'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 嘉義市 </h2>
+								<h2 class="box-body_0">嘉義市</h2>
+								<p class="box-body_0">總共:{{ data_CYI1 }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_CYI_0">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%98%89%E7%BE%A9%E7%B8%A3/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CYI_0'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 嘉義縣 </h2>
+								<h2 class="box-body_0">嘉義縣</h2>
+								<p class="box-body_0">總共:{{ data_CYI0 }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_YUN">
 						<img src="https://github.com/zu-z/project/blob/main/%E9%9B%B2%E6%9E%97/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_YUN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 雲林縣 </h2>
+								<h2 class="box-body_0">雲林縣</h2>
+								<p class="box-body_0">總共:{{ data_YUN }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_NTC">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8D%97%E6%8A%95/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_NTC'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0"> 南投縣 </h2>
+									<h2 class="box-body_0">南投縣</h2>
+									<p class="box-body_0">總共:{{ data_NTC }}人</p>
 								</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_CHW">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%BD%B0%E5%8C%96/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_CHW'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0"> 彰化縣 </h2>
+									<h2 class="box-body_0">彰化縣</h2>
+									<p class="box-body_0">總共:{{ data_CHW }}人</p>
 								</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_TXG">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E4%B8%AD/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TXG'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0"> 台中市 </h2>
+									<h2 class="box-body_0">台中市</h2>
+									<p class="box-body_0">總共:{{ data_TXG }}人</p>
 								</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_ZMI">
 						<img src="https://github.com/zu-z/project/blob/main/%E8%8B%97%E6%A0%97/img/1.png?raw=true" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_ZMI'>
 								<div class="box-hover-text_0">
-									<h2 class="box-body_0"> 苗栗縣 </h2>
+									<h2 class="box-body_0">苗栗縣</h2>
+									<p class="box-body_0">總共:{{ data_ZMI }}人</p>
 								</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_HSZ_1">
 						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E5%B8%82/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HSZ_1'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 新竹市 </h2>
+								<h2 class="box-body_0">新竹市</h2>
+								<p class="box-body_0">總共:{{ data_HSZ1 }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_HSZ_0">
 						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E7%AB%B9%E7%B8%A3/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_HSZ_0'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 新竹縣 </h2>
+								<h2 class="box-body_0">新竹縣</h2>
+								<p class="box-body_0">總共:{{ data_HSZ0 }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_TYN">
 						<img src="https://github.com/zu-z/project/blob/main/%E6%A1%83%E5%9C%92/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TYN'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 桃園市 </h2>
+								<h2 class="box-body_0">桃園市</h2>
+								<p class="box-body_0">總共:{{ data_TYN }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_TPE">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%8F%B0%E5%8C%97/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_TPE'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 台北市 </h2>
+								<h2 class="box-body_0">台北市</h2>
+								<p class="box-body_0">總共:{{ data_TPE }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_NTPC">
 						<img src="https://github.com/zu-z/project/blob/main/%E6%96%B0%E5%8C%97/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_NTPC'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 新北市 </h2>
+								<h2 class="box-body_0">新北市</h2>
+								<p class="box-body_0">總共:{{ data_NTPC }}人</p>
 							</div>
 				    </div>
 					
-					<div class="box">
+					<div class="box" id="data_KEL">
 						<img src="https://github.com/zu-z/project/blob/main/%E5%9F%BA%E9%9A%86/img/1.png?raw=true" alt="感染人數變化" data-elem="pinchzoomer" class="img-responsive" align="right" id='img_KEL'>
 							<div class="box-hover-text_0">
-								<h2 class="box-body_0"> 基隆市 </h2>
+								<h2 class="box-body_0">基隆市</h2>
+								<p class="box-body_0">總共:{{ data_KEL }}人</p>
 							</div>
 				    </div>
-                </div>
-				
-				<div class="tab-content-4" style="overflow-x:auto;overflow-y:auto;background:white;">
-					
-					<p id="use"><h2>網頁使用說明</h2></p>
-					
-						<ol>
-						<h3>
-							<li>最新公告：</li>
-								</tab><h4>有居家隔離政策、入境檢疫政策、最新記者會直播等影片可供參考。</h4>
-						</h3>
-						<h3>
-							<li>預測感染人數變化：</li>
-								</tab><h4>可選擇天數（一周、一個月），並點擊『預測』，需稍待三分鐘後，將顯示預測感染人數和預測模型產生出來的折線圖。（右側將顯示最後一天感染人數之圖層顏色變化）</h4>
-						</h3>
-						<h3>
-							<li>查詢全國感染人數：</li>
-								</tab><h4>可選擇天數（一天、一周、一個月），並選擇起始日期，點擊『查詢』即可顯示感染人數資料。
-								<br>（右側將顯示最後一天感染人數之圖層顏色變化）</h4>
-						</h3>
-						</ol>
-					
-					<p id="theme"><h2>專題主題</h2></p>
-						<ol>
-						<h3>
-							<li>主題：</li>
-								</tab><h4>Covid-19台灣疫情預測及視覺化呈現系統</h4>
-						</h3>
-						<h3>
-							<li>指導老師：</li>
-								</tab><h4>許弘駿 老師</h4>
-						</h3>
-						<h3>
-							<li>研究組員：</li>
-								</tab><h4>慈濟大學/醫學資訊學系/四年級</h4>
-								</tab><h4>組長：108316135 林廣濤</h4>
-								</tab><h4>組員：108316106 鄭筑勻、108316125 吳嘉欣</h4>
-						</h3>
-						<h3>
-							<li>研究動機：</li>
-								</tab><h4>將預測中華民國下轄的縣市的確診人數，以推測之後的疫情發展。</h4>
-						</h3>
-						<h3>
-							<li>工作分配：</li>
-								</tab><h4>108316135 林廣濤：建立、設計類神經網路之實驗</h4>
-								</tab><h4>108316106 鄭筑勻：網頁設計、整理模型資料</h4>
-								</tab><h4>108316125 吳嘉欣：建立資料庫、連接後端與前端網頁、整理模型資料</h4>
-						</h3>
-						</ol>
-                    
-					<p id="google"><h2>表單回饋</h2></p>
-						<ol>
-						<h3>
-							<li>表單連結：</li>
-								</tab><h4><a href="https://forms.gle/BxP7Wz9uZkjjvnjz8">https://forms.gle/BxP7Wz9uZkjjvnjz8</a>。</h4>
-						</h3>
-						</ol>
-				</div>
-               
+			</div>
+		</div>
 </body>
+
 </html>
